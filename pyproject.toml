@@ -22,6 +22,11 @@ classifiers = [
 # constrained edge/embedded Linux images with only a Python interpreter.
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/moyeendev/netprobe"
+Documentation = "https://github.com/moyeendev/netprobe/tree/main/docs"
+Issues = "https://github.com/moyeendev/netprobe/issues"
+
 [project.optional-dependencies]
 scapy = ["scapy>=2.5"]
 plot = ["matplotlib>=3.6", "numpy>=1.23"]
