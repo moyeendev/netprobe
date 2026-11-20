@@ -7,8 +7,8 @@ runs/
 build/
 dist/
 
-# paper drafts and results stay local (not published)
-paper/
+# evaluation output
+evaluation-results/
 
 # never commit credentials
 .env

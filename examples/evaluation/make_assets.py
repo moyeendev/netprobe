@@ -1,4 +1,4 @@
-"""Build the paper's tables and the correlation-timeline figure from results.json."""
+"""Build the evaluation tables and the correlation-timeline figure from results.json."""
 
 from __future__ import annotations
 
@@ -157,8 +157,8 @@ def figure(run_dir: Path, out: Path) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--results", default="paper/results")
-    ap.add_argument("--figures", default="paper/figures")
+    ap.add_argument("--results", default="evaluation-results")
+    ap.add_argument("--figures", default="evaluation-results/figures")
     a = ap.parse_args()
     rdir = Path(a.results)
     res = json.loads((rdir / "results.json").read_text())

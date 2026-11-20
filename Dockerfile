@@ -1,6 +1,6 @@
-# Reproducibility container for the NetProbe paper experiments.
+# Reproducibility container for the NetProbe evaluation (examples/run_evaluation.sh).
 #   docker build -t netprobe-repro .
-#   docker run --rm --privileged -v "$PWD":/src netprobe-repro bash examples/run_reproduce_paper.sh
+#   docker run --rm --privileged -v "$PWD":/src netprobe-repro bash examples/run_evaluation.sh
 # --privileged is needed to create network namespaces and attach tc netem.
 FROM python:3.12-slim
 

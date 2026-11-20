@@ -28,7 +28,7 @@ to be aligned by hand.
 ```bash
 pip install .            # core, zero dependencies
 pip install ".[scapy]"   # BPF-filtered capture backend
-pip install ".[plot,dev]"  # paper figures, tests, lint
+pip install ".[plot,dev]"  # evaluation figures, tests, lint
 ```
 
 ## Quickstart
@@ -109,11 +109,11 @@ schema and the correlation pipeline.
 |---|---|---|
 | `examples/run_baseline.sh` | nothing (loopback) | on-site baseline; `TARGET=` for a remote server |
 | `examples/run_congestion_scenario.sh` | root | 3-namespace testbed, `tc netem` bottleneck, load + capture, report |
-| `examples/run_reproduce_paper.sh` | root or Docker | every table and figure of the paper |
+| `examples/run_evaluation.sh` | root or Docker | accuracy vs ping/iperf3, congestion runs, tables and figures |
 
 ```bash
 docker build -t netprobe-repro .
-docker run --rm --privileged -v "$PWD":/src netprobe-repro bash examples/run_reproduce_paper.sh
+docker run --rm --privileged -v "$PWD":/src netprobe-repro bash examples/run_evaluation.sh
 ```
 
 ## Tests
@@ -140,7 +140,7 @@ socket, and capture is unavailable. Native support is future work.
 
 * IPv4 only; IPv6 targets are rejected with an explicit error.
 * Python userspace timestamping: the UDP probe reads 0.2–0.55 ms above `ping`
-  and ICMP mode up to 0.28 ms (paper, Table 1a); use `--mode icmp` for lower
+  and ICMP mode up to 0.28 ms (`evaluation-results/table_accuracy.md`); use `--mode icmp` for lower
   overhead.
 * The load generator is a Python token bucket; sustained rates above a few
   hundred Mbit/s are CPU-bound.

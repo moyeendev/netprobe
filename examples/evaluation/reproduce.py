@@ -1,4 +1,4 @@
-"""Paper experiments. Run via examples/run_reproduce_paper.sh (root, netns testbed).
+"""Evaluation experiments. Run via examples/run_evaluation.sh (root, netns testbed).
 
 E1  delay accuracy   : ping vs NetProbe (icmp, udp) under netem delay/jitter/loss
 E2  bandwidth accuracy: iperf3 vs NetProbe under netem rate limits
@@ -130,7 +130,7 @@ def run_congestion(out: Path, label: str, duration: float, load_bps: float,
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default="paper/results")
+    ap.add_argument("--out", default="evaluation-results")
     ap.add_argument("--quick", action="store_true")
     ap.add_argument("--only", choices=["delay", "bandwidth", "congestion"],
                     help="re-run one experiment and merge into an existing results.json")

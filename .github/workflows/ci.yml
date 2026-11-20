@@ -24,8 +24,8 @@ jobs:
         run: pytest -q
 
   netem-smoke:
-    # End-to-end check of the paper pipeline in a privileged container
-    # (network namespaces + tc netem). Short durations; not paper numbers.
+    # End-to-end check of the evaluation pipeline in a privileged container
+    # (network namespaces + tc netem). Short durations only.
     runs-on: ubuntu-latest
     needs: test
     steps:
@@ -35,4 +35,4 @@ jobs:
       - name: Quick reproduction
         run: |
           docker run --rm --privileged -e QUICK=1 -e RESULTS=/tmp/results \
-            netprobe-repro bash examples/run_reproduce_paper.sh
+            netprobe-repro bash examples/run_evaluation.sh

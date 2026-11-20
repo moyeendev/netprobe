@@ -44,7 +44,7 @@ with Session(target="10.0.0.2", out_dir="runs/exp1", label="cabinet A") as s:
     s.report()
 ```
 
-A parameter sweep (the pattern used in `examples/paper/reproduce.py`):
+A parameter sweep (the pattern used in `examples/evaluation/reproduce.py`):
 
 ```python
 for rate in (10e6, 20e6, 40e6):
