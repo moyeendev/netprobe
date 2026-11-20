@@ -4,6 +4,14 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 runs/
-paper/results/runs/
 build/
 dist/
+
+# paper drafts and results stay local (not published)
+paper/
+
+# never commit credentials
+.env
+*.pem
+*.key
+id_*
