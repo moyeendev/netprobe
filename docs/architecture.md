@@ -112,12 +112,12 @@ runs/<run_id>/
 ## Correlation pipeline
 
 1. **Align**: bin all time-series metrics by `ts_monotonic` (default 0.5 s);
-   aggregation per metric is fixed (`AGGREGATION` in `analysis/correlate.py`).
+   aggregation per metric is fixed (`AGGREGATION` in `src/netprobe/analysis/correlate.py`).
 2. **Phases**: split the run at `stress.event` start/stop markers
    (baseline / load / after); without load, split at the detected onset.
 3. **Congestion**: windowed signals (queuing delay, loss, throughput drop)
    against a baseline → level, onset, decision time, recovery
-   (see `probes/congestion.py` docstring for the exact rule).
+   (see `src/netprobe/probes/congestion.py` docstring for the exact rule).
 4. **Lag**: lagged Pearson correlation between offered load and RTT /
    throughput.
 5. **Evidence**: pcap frame range and on-wire retransmissions in the onset

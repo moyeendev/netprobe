@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use NetProbe, please cite it as below."
+title: "NetProbe: single-clock correlation of delay, throughput, load and packet evidence"
+type: software
+version: 0.1.0
+date-released: "2026-11-20"
+# Add after the first Zenodo release:
+# doi: "10.5281/zenodo.<concept-record>"
+license: MIT
+authors:
+  - given-names: "M. A."
+    family-names: "Moyeen"
+    orcid: "https://orcid.org/0009-0006-5429-7403"
+    email: "moyeeniict@gmail.com"
+    affiliation: "Institute of Information and Communication Technology, Khulna University of Engineering & Technology"
+  - given-names: "Md. Abdul"
+    family-names: "Awal"
+    email: "awal@cse.kuet.ac.bd"
+    affiliation: "Department of Computer Science and Engineering, Khulna University of Engineering & Technology"
+repository-code: "https://github.com/moyeendev/netprobe"
+keywords:
+  - network measurement
+  - latency
+  - congestion detection
+  - packet capture
+  - netem

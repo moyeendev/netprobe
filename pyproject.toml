@@ -9,10 +9,18 @@ description = "Unified-clock network measurement: delay, bandwidth, congestion, 
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
-authors = [{ name = "NetProbe authors" }]
+authors = [
+    { name = "M. A. Moyeen", email = "moyeeniict@gmail.com" },
+    { name = "Md. Abdul Awal", email = "awal@cse.kuet.ac.bd" },
+]
 keywords = ["network measurement", "latency", "jitter", "throughput", "congestion", "pcap", "netem"]
 classifiers = [
+    "Development Status :: 4 - Beta",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: MIT License",
     "Operating System :: POSIX :: Linux",
     "Topic :: System :: Networking :: Monitoring",
@@ -36,6 +44,7 @@ dev = ["pytest>=7", "ruff>=0.4"]
 netprobe = "netprobe.cli:main"
 
 [tool.setuptools.packages.find]
+where = ["src"]
 include = ["netprobe*"]
 
 [tool.ruff]
@@ -48,7 +57,7 @@ ignore = ["B008"]
 
 [tool.ruff.lint.per-file-ignores]
 # embedded HTML/CSS/JS template strings
-"netprobe/analysis/report.py" = ["E501"]
+"src/netprobe/analysis/report.py" = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

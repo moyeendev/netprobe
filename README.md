@@ -147,6 +147,16 @@ socket, and capture is unavailable. Native support is future work.
 * The congestion detector is a transparent threshold rule, not a learned
   model; thresholds are configurable and recorded in the report.
 
+## Citation
+
+If you use NetProbe, please cite it using the metadata in [CITATION.cff](CITATION.cff)
+(GitHub's "Cite this repository" button). Each release is archived on Zenodo with a DOI.
+
+## Authors
+
+M. A. Moyeen (Institute of Information and Communication Technology, KUET) and
+Md. Abdul Awal (Department of Computer Science and Engineering, KUET), Khulna, Bangladesh.
+
 ## License
 
-MIT, see [LICENSE](LICENSE).
+MIT, see [LICENSE.txt](LICENSE.txt).

@@ -1,0 +1,38 @@
+{
+  "title": "NetProbe: single-clock correlation of delay, throughput, load and packet evidence",
+  "description": "NetProbe is an open-source Python tool and library for Linux that runs delay (RTT, RFC 3550 jitter, loss), TCP throughput, rate-limited load and packet capture concurrently and records every observation in one schema stamped by one monotonic clock. A deterministic analysis reports load phases, congestion onset and the capture frames behind it.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Moyeen, M. A.",
+      "orcid": "0009-0006-5429-7403",
+      "affiliation": "Institute of Information and Communication Technology, Khulna University of Engineering & Technology"
+    },
+    {
+      "name": "Awal, Md. Abdul",
+      "affiliation": "Department of Computer Science and Engineering, Khulna University of Engineering & Technology"
+    }
+  ],
+  "keywords": [
+    "network measurement",
+    "latency",
+    "jitter",
+    "throughput",
+    "congestion detection",
+    "packet capture",
+    "netem"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/moyeendev/netprobe",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/moyeendev/netprobe/tree/main/docs",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}
