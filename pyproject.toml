@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netprobe"
+version = "0.1.0"
+description = "Unified-clock network measurement: delay, bandwidth, congestion, load and packet capture correlated in one run"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "NetProbe authors" }]
+keywords = ["network measurement", "latency", "jitter", "throughput", "congestion", "pcap", "netem"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: System :: Networking :: Monitoring",
+    "Intended Audience :: Science/Research",
+]
+# The core has no third-party dependencies so it can be deployed on
+# constrained edge/embedded Linux images with only a Python interpreter.
+dependencies = []
+
+[project.optional-dependencies]
+scapy = ["scapy>=2.5"]
+plot = ["matplotlib>=3.6", "numpy>=1.23"]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.scripts]
+netprobe = "netprobe.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["netprobe*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+# embedded HTML/CSS/JS template strings
+"netprobe/analysis/report.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: exercises real loopback sockets (no privileges needed)",
+    "linux: requires a Linux kernel",
+]
