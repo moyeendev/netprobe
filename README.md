@@ -1,5 +1,9 @@
 # NetProbe
 
+[![ci](https://github.com/moyeendev/netprobe/actions/workflows/ci.yml/badge.svg)](https://github.com/moyeendev/netprobe/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24398726.svg)](https://doi.org/10.5281/zenodo.24398726)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
+
 **One clock for delay, bandwidth, congestion, load and packet capture.**
 
 NetProbe runs network measurements concurrently in a single session and writes
@@ -150,7 +154,9 @@ socket, and capture is unavailable. Native support is future work.
 ## Citation
 
 If you use NetProbe, please cite it using the metadata in [CITATION.cff](CITATION.cff)
-(GitHub's "Cite this repository" button). Each release is archived on Zenodo with a DOI.
+(GitHub's "Cite this repository" button). Each release is archived on Zenodo:
+concept DOI (all versions) [10.5281/zenodo.24398726](https://doi.org/10.5281/zenodo.24398726),
+v0.1.0 [10.5281/zenodo.24398727](https://doi.org/10.5281/zenodo.24398727).
 
 ## Authors
 
